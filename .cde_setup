@@ -1,0 +1,73 @@
+#export ON_CDETOOLS=t
+export ON_CDETOOLS=alpha,/custom/tools
+
+#CDE Std DSGN/VER Tools
+#export ON_DVT=2023.1.9
+export ON_DVT=24.1.7
+
+export ON_CLIOSOFT=t
+export ON_MATLAB=matlab_r2018a
+export ON_POWERPRO=powerpro-10.6
+
+export ON_QUESTA=2023.3_1
+
+export ON_QUESTACDC=V2023.3_1
+export ON_SPYGLASS=T-2022.06-SP2-1
+export ON_SYNOPSYS=U-2022.12
+export ON_VERDI=S-2021.09-SP1-1
+export ON_VISUALIZER=2023.3
+
+export ON_VMANAGER=22.09.001
+export ON_XCELIUM=xcelium23.09.001
+
+# GCC
+export LANG_GCC=9.3.0
+prepend_path   $ONSEMI/lang/$OSRN/gcc-$LANG_GCC/bin
+prepend_LDpath $ONSEMI/lang/$OSRN/gcc-$LANG_GCC/lib
+prepend_LDpath $ONSEMI/lang/$OSRN/gcc-$LANG_GCC/lib64
+export LD_RUN_PATH=$ONSEMI/lang/$OSRN/gcc-$LANG_GCC/lib64
+#Binutils
+# Version: 2.37
+# Path /custom/tools/lang/release7/binutils-2.37/bin
+prepend_path   $ONSEMI/lang/$OSRN/binutils-2.37/bin
+#Compiler options
+# g++ -DFPM_128BIT -DOSCAR_DBG -fno-tree-vectorize -I -I../model -I../../oscar/sw/lib -I../test -I../sim -I../ext/include -g -O2 -Wall _Wextra -std=c++17 -I../sim
+
+# GDB
+prepend_path   $ONSEMI/lang/$OSRN/gdb-8.0/bin
+prepend_LDpath $ONSEMI/lang/$OSRN/gdb-8.0/lib
+
+# MAKE
+prepend_path   $ONSEMI/lang/$OSRN/make-4.3/bin
+
+# OPENCV
+export OPENCV_HOME=$ONSEMI/lang/$OSRN/opencv-3.3.0 # Needed by a Makefile
+export OPENCV_DIR=/custom/tools/lang/release7/opencv-3.3.0 # Makefile Requirement
+prepend_LDpath $OPENCV_HOME/lib
+
+# PYTHON
+export LANG_PYTHON=3.6.5
+prepend_path   $ONSEMI/lang/$OSRN/python$LANG_PYTHON/bin
+prepend_LDpath $ONSEMI/lang/$OSRN/python$LANG_PYTHON/lib
+
+#SVN
+prepend_path   $ONSEMI/apps/$OSRN/svn-1.9.7/bin 
+
+#UVM : not used?
+#export UVM_VER=uvm-1.2
+#export UVM_HOME="/cad/mgc/questa/${ON_QUESTA}/questasim/verilog_src/${UVM_VER}"
+#export UVM_VER=CDNS-1.2
+#export UVM_HOME="/cad/cds/xcelium/${ON_XCELIUM}/tools/methodology/UVM/${UVM_VER}/sv"
+export IUS_VER=15.20.006 # For ./dotest - update/ remove ius_ver 584-586 (MI/jtm43m)
+
+# VERDI
+prepend_LDpath /cad/synopsys/verdi/$ON_VERDI/share/PLI/MODELSIM/LINUX64
+
+#IDS
+#export ON_IDS=ids-7.62.0.0
+export ON_IDS=ids-7.78.0.0
+
+#SYNOPSYS
+export SNPSLMD_QUEUE=true 
+export ON_LIBRARYCOMPILER=K-2015.12-SP1
+export ON_DDI=DDI2212

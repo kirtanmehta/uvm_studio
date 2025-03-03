@@ -1,0 +1,198 @@
+xrun: 23.09-s001: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	23.09-s001: Started on Mar 02, 2025 at 17:50:50 PST
+xrun
+	-sv
+	-uvm
+	+access+rw
+	-f sim_files.f
+		+incdir+/proj/enigma/users/kirtan/studio/tb
+		-sv
+		/proj/enigma/users/kirtan/studio/tb/mem_if.sv
+		+incdir+/proj/enigma/users/kirtan/studio/uvm
+		-sv
+		/proj/enigma/users/kirtan/studio/uvm/uvm_package_files.sv
+		-sv
+		/proj/enigma/users/kirtan/studio/tb/memory.sv
+		-sv
+		/proj/enigma/users/kirtan/studio/tb/testbench.sv
+	+UVM_TESTNAME=base_test
+Recompiling... reason: file '../uvm/uvc/mem_driver.sv' is newer than expected.
+	expected: Sun Mar  2 17:17:02 2025
+	actual:   Sun Mar  2 17:50:48 2025
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /cad/cds/xcelium/xcelium23.09.001/tools/methodology/UVM/CDNS-1.1d
+xmvlog: *W,USENDT: Please use the new -enable_no_default_type_param switch or -newsv switch instead of CADENCE_ENABLE_AVSREQ_63188_PHASE_1 environment variable to trigger the same functionality.
+xmvlog: *W,USENDT: Please use the new -enable_no_default_type_param switch or -newsv switch instead of CADENCE_ENABLE_AVSREQ_63188_PHASE_1 environment variable to trigger the same functionality.
+file: /proj/enigma/users/kirtan/studio/uvm/uvm_package_files.sv
+    super.new(name, parent);
+            |
+xmvlog: *W,CSNEXA (/proj/enigma/users/kirtan/studio/uvm/./uvc/mem_agent.sv,15|12): Explicit super.new arguments used instead of 'extends' arguments.
+    base_seq.randomize();
+                     |
+xmvlog: *W,FUNTSK (/proj/enigma/users/kirtan/studio/uvm/./tests/base_test.sv,34|21): function called as a task without void'().
+	package worklib.uvm_package_files:sv
+		errors: 0, warnings: 2
+file: /proj/enigma/users/kirtan/studio/tb/memory.sv
+    reg [DATA_WIDTH-1:0] rdata;
+                             |
+xmvlog: *W,ILLPDX (/proj/enigma/users/kirtan/studio/tb/memory.sv,34|29): Multiple declarations for a port not allowed in module with ANSI list of port declarations (port 'rdata') [12.3.4(IEEE-2001)].
+file: /proj/enigma/users/kirtan/studio/tb/testbench.sv
+	module worklib.testbench:sv
+		errors: 0, warnings: 0
+xmvlog: *W,SPDUSD: Include directory /proj/enigma/users/kirtan/studio/tb given but not used.
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 2
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		uvm_pkg
+		cdns_uvmapi
+		cdns_assert2uvm_pkg
+		cdns_uvm_pkg
+		uvm_package_files
+		testbench
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.testbench:sv <0x5670440a>
+			streams: 519, words: 466694
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                       Instances  Unique
+		Modules:                       2       2
+		Interfaces:                    1       1
+		Verilog packages:              5       5
+		Registers:                 13896   10160
+		Scalar wires:                  4       -
+		Vectored wires:                4       -
+		Named events:                  4      12
+		Always blocks:                 4       4
+		Initial blocks:              281     155
+		Clocking blocks:               2       2
+		Clocking items:               10      10
+		Parallel blocks:              27      28
+		Pseudo assignments:            7       -
+		Assertions:                    2       2
+		SV Class declarations:       197     311
+		SV Class specializations:    378     378
+		Process Clocks:                3       2
+	Writing initial simulation snapshot: worklib.testbench:sv
+xmsim: *W,XCSLDP: The switch -USELICENSE is ignored, so it does not affect licensing in Xcelium.
+Loading snapshot worklib.testbench:sv .................... Done
+SVSEED default: 1
+xcelium> source /cad/cds/xcelium/xcelium23.09.001/tools/xcelium/files/xmsimrc
+xcelium> source /cad/cds/xcelium/xcelium23.09.001/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
+xcelium> run
+----------------------------------------------------------------
+CDNS-UVM-1.1d (23.09-s001)
+(C) 2007-2013 Mentor Graphics Corporation
+(C) 2007-2013 Cadence Design Systems, Inc.
+(C) 2006-2013 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test base_test...
+--------------------------------------------------------------
+Name                       Type                    Size  Value
+--------------------------------------------------------------
+uvm_test_top               base_test               -     @2630
+  env                      mem_env                 -     @2690
+    mem_agnt               mem_agent               -     @2738
+      driver               mem_driver              -     @2850
+        rsp_port           uvm_analysis_port       -     @2951
+        seq_item_port      uvm_seq_item_pull_port  -     @2900
+      monitor              mem_monitor             -     @2770
+        mon_analysis_port  uvm_analysis_port       -     @2819
+      sequencer            mem_sequencer           -     @2930
+        rsp_export         uvm_analysis_export     -     @3039
+        seq_item_export    uvm_seq_item_pull_imp   -     @3587
+        arbitration_queue  array                   0     -    
+        lock_queue         array                   0     -    
+        num_last_reqs      integral                32    'd1  
+        num_last_rsps      integral                32    'd1  
+--------------------------------------------------------------
+UVM_INFO /proj/enigma/users/kirtan/studio/uvm/./uvc/mem_driver.sv(32) @ 0: uvm_test_top.env.mem_agnt.driver [driver] after waiting for rstn to be asserted
+UVM_INFO /proj/enigma/users/kirtan/studio/uvm/./uvc/mem_driver.sv(39) @ 5: uvm_test_top.env.mem_agnt.driver [driver] after waiting for rstn to be deasserted
+UVM_INFO /proj/enigma/users/kirtan/studio/uvm/./uvc/mem_driver.sv(44) @ 5: uvm_test_top.env.mem_agnt.driver [driver] enter in main_phase
+UVM_WARNING @ 5: uvm_test_top.env.mem_agnt.sequencer@@base_seq [uvm_sequence_base] Body definition undefined
+--------- [DRIVER-TRANSFER] ---------
+	ADDR = 0 	WDATA = 0
+	ADDR = 0 	WDATA = 0
+-----------------------------------------
+--------- [DRIVER-TRANSFER] ---------
+	ADDR = 1 	WDATA = 1
+	ADDR = 1 	WDATA = 1
+-----------------------------------------
+--------- [DRIVER-TRANSFER] ---------
+	ADDR = 2 	WDATA = 2
+	ADDR = 2 	WDATA = 2
+-----------------------------------------
+--------- [DRIVER-TRANSFER] ---------
+	ADDR = 3 	WDATA = 3
+	ADDR = 3 	WDATA = 3
+-----------------------------------------
+--------- [DRIVER-TRANSFER] ---------
+	ADDR = 4 	WDATA = 4
+	ADDR = 4 	WDATA = 4
+-----------------------------------------
+--------- [DRIVER-TRANSFER] ---------
+	ADDR = 0 	WDATA = 4
+	ADDR = 0 	RDATA = x
+-----------------------------------------
+--------- [DRIVER-TRANSFER] ---------
+	ADDR = 1 	WDATA = 4
+	ADDR = 1 	RDATA = 0
+-----------------------------------------
+--------- [DRIVER-TRANSFER] ---------
+	ADDR = 2 	WDATA = 4
+	ADDR = 2 	RDATA = 1
+-----------------------------------------
+--------- [DRIVER-TRANSFER] ---------
+	ADDR = 3 	WDATA = 4
+	ADDR = 3 	RDATA = 2
+-----------------------------------------
+--------- [DRIVER-TRANSFER] ---------
+	ADDR = 4 	WDATA = 4
+	ADDR = 4 	RDATA = 3
+-----------------------------------------
+UVM_INFO /proj/enigma/users/kirtan/studio/uvm/./tests/base_test.sv(51) @ 355: uvm_test_top [base_test] ---------------------------------------
+UVM_INFO /proj/enigma/users/kirtan/studio/uvm/./tests/base_test.sv(52) @ 355: uvm_test_top [base_test] ----           TEST PASS           ----
+UVM_INFO /proj/enigma/users/kirtan/studio/uvm/./tests/base_test.sv(53) @ 355: uvm_test_top [base_test] ---------------------------------------
+
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :    7
+UVM_WARNING :    1
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[base_test]     3
+[driver]     3
+[uvm_sequence_base]     1
+Simulation complete via $finish(1) at time 355 NS + 86
+/cad/cds/xcelium/xcelium23.09.001/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
+xcelium> exit
+TOOL:	xrun	23.09-s001: Exiting on Mar 02, 2025 at 17:50:53 PST  (total: 00:00:03)

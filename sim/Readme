@@ -1,0 +1,1 @@
+xrun -sv -uvm -f sim_files.mft +UVM_TESTNAME=base_test testbench
