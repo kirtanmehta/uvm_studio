@@ -5,16 +5,16 @@ xrun
 	-uvm
 	+access+rw
 	-f sim_files.f
-		+incdir+/proj/enigma/users/kirtan/studio/tb
+		+incdir+/proj/enigma/users/kirtan/uvm_studio/tb
 		-sv
-		/proj/enigma/users/kirtan/studio/tb/mem_if.sv
-		+incdir+/proj/enigma/users/kirtan/studio/uvm
+		/proj/enigma/users/kirtan/uvm_studio/tb/mem_if.sv
+		+incdir+/proj/enigma/users/kirtan/uvm_studio/uvm
 		-sv
-		/proj/enigma/users/kirtan/studio/uvm/uvm_package_files.sv
+		/proj/enigma/users/kirtan/uvm_studio/uvm/uvm_package_files.sv
 		-sv
-		/proj/enigma/users/kirtan/studio/tb/memory.sv
+		/proj/enigma/users/kirtan/uvm_studio/tb/memory.sv
 		-sv
-		/proj/enigma/users/kirtan/studio/tb/testbench.sv
+		/proj/enigma/users/kirtan/uvm_studio/tb/testbench.sv
 	+UVM_TESTNAME=base_test
 Recompiling... reason: file '../uvm/uvc/mem_driver.sv' is newer than expected.
 	expected: Sun Mar  2 17:17:02 2025
@@ -22,23 +22,23 @@ Recompiling... reason: file '../uvm/uvc/mem_driver.sv' is newer than expected.
 Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /cad/cds/xcelium/xcelium23.09.001/tools/methodology/UVM/CDNS-1.1d
 xmvlog: *W,USENDT: Please use the new -enable_no_default_type_param switch or -newsv switch instead of CADENCE_ENABLE_AVSREQ_63188_PHASE_1 environment variable to trigger the same functionality.
 xmvlog: *W,USENDT: Please use the new -enable_no_default_type_param switch or -newsv switch instead of CADENCE_ENABLE_AVSREQ_63188_PHASE_1 environment variable to trigger the same functionality.
-file: /proj/enigma/users/kirtan/studio/uvm/uvm_package_files.sv
+file: /proj/enigma/users/kirtan/uvm_studio/uvm/uvm_package_files.sv
     super.new(name, parent);
             |
-xmvlog: *W,CSNEXA (/proj/enigma/users/kirtan/studio/uvm/./uvc/mem_agent.sv,15|12): Explicit super.new arguments used instead of 'extends' arguments.
+xmvlog: *W,CSNEXA (/proj/enigma/users/kirtan/uvm_studio/uvm/./uvc/mem_agent.sv,15|12): Explicit super.new arguments used instead of 'extends' arguments.
     base_seq.randomize();
                      |
-xmvlog: *W,FUNTSK (/proj/enigma/users/kirtan/studio/uvm/./tests/base_test.sv,34|21): function called as a task without void'().
+xmvlog: *W,FUNTSK (/proj/enigma/users/kirtan/uvm_studio/uvm/./tests/base_test.sv,34|21): function called as a task without void'().
 	package worklib.uvm_package_files:sv
 		errors: 0, warnings: 2
-file: /proj/enigma/users/kirtan/studio/tb/memory.sv
+file: /proj/enigma/users/kirtan/uvm_studio/tb/memory.sv
     reg [DATA_WIDTH-1:0] rdata;
                              |
-xmvlog: *W,ILLPDX (/proj/enigma/users/kirtan/studio/tb/memory.sv,34|29): Multiple declarations for a port not allowed in module with ANSI list of port declarations (port 'rdata') [12.3.4(IEEE-2001)].
-file: /proj/enigma/users/kirtan/studio/tb/testbench.sv
+xmvlog: *W,ILLPDX (/proj/enigma/users/kirtan/uvm_studio/tb/memory.sv,34|29): Multiple declarations for a port not allowed in module with ANSI list of port declarations (port 'rdata') [12.3.4(IEEE-2001)].
+file: /proj/enigma/users/kirtan/uvm_studio/tb/testbench.sv
 	module worklib.testbench:sv
 		errors: 0, warnings: 0
-xmvlog: *W,SPDUSD: Include directory /proj/enigma/users/kirtan/studio/tb given but not used.
+xmvlog: *W,SPDUSD: Include directory /proj/enigma/users/kirtan/uvm_studio/tb given but not used.
 	Total errors/warnings found outside modules and primitives:
 		errors: 0, warnings: 2
 		Caching library 'worklib' ....... Done
@@ -122,9 +122,9 @@ uvm_test_top               base_test               -     @2630
         num_last_reqs      integral                32    'd1  
         num_last_rsps      integral                32    'd1  
 --------------------------------------------------------------
-UVM_INFO /proj/enigma/users/kirtan/studio/uvm/./uvc/mem_driver.sv(32) @ 0: uvm_test_top.env.mem_agnt.driver [driver] after waiting for rstn to be asserted
-UVM_INFO /proj/enigma/users/kirtan/studio/uvm/./uvc/mem_driver.sv(39) @ 5: uvm_test_top.env.mem_agnt.driver [driver] after waiting for rstn to be deasserted
-UVM_INFO /proj/enigma/users/kirtan/studio/uvm/./uvc/mem_driver.sv(44) @ 5: uvm_test_top.env.mem_agnt.driver [driver] enter in main_phase
+UVM_INFO /proj/enigma/users/kirtan/uvm_studio/uvm/./uvc/mem_driver.sv(32) @ 0: uvm_test_top.env.mem_agnt.driver [driver] after waiting for rstn to be asserted
+UVM_INFO /proj/enigma/users/kirtan/uvm_studio/uvm/./uvc/mem_driver.sv(39) @ 5: uvm_test_top.env.mem_agnt.driver [driver] after waiting for rstn to be deasserted
+UVM_INFO /proj/enigma/users/kirtan/uvm_studio/uvm/./uvc/mem_driver.sv(44) @ 5: uvm_test_top.env.mem_agnt.driver [driver] enter in main_phase
 UVM_WARNING @ 5: uvm_test_top.env.mem_agnt.sequencer@@base_seq [uvm_sequence_base] Body definition undefined
 --------- [DRIVER-TRANSFER] ---------
 	ADDR = 0 	WDATA = 0
@@ -166,9 +166,9 @@ UVM_WARNING @ 5: uvm_test_top.env.mem_agnt.sequencer@@base_seq [uvm_sequence_bas
 	ADDR = 4 	WDATA = 4
 	ADDR = 4 	RDATA = 3
 -----------------------------------------
-UVM_INFO /proj/enigma/users/kirtan/studio/uvm/./tests/base_test.sv(51) @ 355: uvm_test_top [base_test] ---------------------------------------
-UVM_INFO /proj/enigma/users/kirtan/studio/uvm/./tests/base_test.sv(52) @ 355: uvm_test_top [base_test] ----           TEST PASS           ----
-UVM_INFO /proj/enigma/users/kirtan/studio/uvm/./tests/base_test.sv(53) @ 355: uvm_test_top [base_test] ---------------------------------------
+UVM_INFO /proj/enigma/users/kirtan/uvm_studio/uvm/./tests/base_test.sv(51) @ 355: uvm_test_top [base_test] ---------------------------------------
+UVM_INFO /proj/enigma/users/kirtan/uvm_studio/uvm/./tests/base_test.sv(52) @ 355: uvm_test_top [base_test] ----           TEST PASS           ----
+UVM_INFO /proj/enigma/users/kirtan/uvm_studio/uvm/./tests/base_test.sv(53) @ 355: uvm_test_top [base_test] ---------------------------------------
 
 --- UVM Report catcher Summary ---
 

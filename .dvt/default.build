@@ -5,18 +5,18 @@
 // // +incdir+$UVM_HOME/src
 // // $UVM_HOME/src/uvm_pkg.sv
 
-// +incdir+/proj/enigma/users/kirtan/studio/tb/ 
-// +incdir+/proj/enigma/users/kirtan/studio/uvm/       
-// /proj/enigma/users/kirtan/studio/uvm/*.sv
-// /proj/enigma/users/kirtan/studio/tb/*.sv
+// +incdir+/proj/enigma/users/kirtan/uvm_studio/tb/ 
+// +incdir+/proj/enigma/users/kirtan/uvm_studio/uvm/       
+// /proj/enigma/users/kirtan/uvm_studio/uvm/*.sv
+// /proj/enigma/users/kirtan/uvm_studio/tb/*.sv
 
 
 
 // +dvt_prepend_init +dvt_env+UVM_HOME=/cad/mgc/questa/2023.3_1/questasim/verilog_src/uvm-1.1d
 // +dvt_init+questa.vlog /cad/mgc/questa/2023.3_1/questasim/verilog_src/dpi_cpack/dpi_cpackages.sv
-// +dvt_init+questa.vlog -uvm -sv -suppress 2223 -suppress 2286 -covermultiuserenv   +define+UVM_REPORT_DISABLE_FILE_LINE +define+UVM_REPORT_DISABLE_FILE_LINE -incr -mfcu -l /proj/enigma/users/kirtan/studio/sim/logs/questa/test_top_random.vlog  -suppress 7034 -permissive  +incdir+/proj/enigma/users/kirtan/studio/sv /proj/enigma/users/kirtan/studio/sv/*.sv
+// +dvt_init+questa.vlog -uvm -sv -suppress 2223 -suppress 2286 -covermultiuserenv   +define+UVM_REPORT_DISABLE_FILE_LINE +define+UVM_REPORT_DISABLE_FILE_LINE -incr -mfcu -l /proj/enigma/users/kirtan/uvm_studio/sim/logs/questa/test_top_random.vlog  -suppress 7034 -permissive  +incdir+/proj/enigma/users/kirtan/uvm_studio/sv /proj/enigma/users/kirtan/uvm_studio/sv/*.sv
 
-// +dvt_init+questa.vlog -uvm -sv -suppress 2223 -suppress 2286 -covermultiuserenv   +define+UVM_REPORT_DISABLE_FILE_LINE +define+UVM_REPORT_DISABLE_FILE_LINE -incr -mfcu -l /proj/enigma/users/kirtan/studio/sim/logs/questa/test_top_random.vlog  -suppress 7034 -permissive  +incdir+/proj/enigma/users/kirtan/studio/uvm /proj/enigma/users/kirtan/studio/uvm/*.sv
+// +dvt_init+questa.vlog -uvm -sv -suppress 2223 -suppress 2286 -covermultiuserenv   +define+UVM_REPORT_DISABLE_FILE_LINE +define+UVM_REPORT_DISABLE_FILE_LINE -incr -mfcu -l /proj/enigma/users/kirtan/uvm_studio/sim/logs/questa/test_top_random.vlog  -suppress 7034 -permissive  +incdir+/proj/enigma/users/kirtan/uvm_studio/uvm /proj/enigma/users/kirtan/uvm_studio/uvm/*.sv
 
-+dvt_init+xcelium.xrun -uvm -sv -suppress 2223 -suppress 2286 -covermultiuserenv   +define+UVM_REPORT_DISABLE_FILE_LINE +define+UVM_REPORT_DISABLE_FILE_LINE -incr -mfcu -l /proj/enigma/users/kirtan/studio/sim/xrun.log  -suppress 7034 -permissive  +incdir+/proj/enigma/users/kirtan/studio/uvm /proj/enigma/users/kirtan/studio/uvm/uvm_package_files.sv
-+dvt_init+xcelium.xrun -uvm -sv -suppress 2223 -suppress 2286 -covermultiuserenv   +define+UVM_REPORT_DISABLE_FILE_LINE +define+UVM_REPORT_DISABLE_FILE_LINE -incr -mfcu -l /proj/enigma/users/kirtan/studio/sim/xrun.log  -suppress 7034 -permissive  +incdir+/proj/enigma/users/kirtan/studio/tb /proj/enigma/users/kirtan/studio/tb/testbench.sv
++dvt_init+xcelium.xrun -uvm -sv -suppress 2223 -suppress 2286 -covermultiuserenv   +define+UVM_REPORT_DISABLE_FILE_LINE +define+UVM_REPORT_DISABLE_FILE_LINE -incr -mfcu -l /proj/enigma/users/kirtan/uvm_studio/sim/xrun.log  -suppress 7034 -permissive  +incdir+/proj/enigma/users/kirtan/uvm_studio/uvm /proj/enigma/users/kirtan/uvm_studio/uvm/uvm_package_files.sv
++dvt_init+xcelium.xrun -uvm -sv -suppress 2223 -suppress 2286 -covermultiuserenv   +define+UVM_REPORT_DISABLE_FILE_LINE +define+UVM_REPORT_DISABLE_FILE_LINE -incr -mfcu -l /proj/enigma/users/kirtan/uvm_studio/sim/xrun.log  -suppress 7034 -permissive  +incdir+/proj/enigma/users/kirtan/uvm_studio/tb /proj/enigma/users/kirtan/uvm_studio/tb/testbench.sv

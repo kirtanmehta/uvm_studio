@@ -1,9 +1,9 @@
 #!/bin/bash
 
-CWD=/proj/enigma/users/kirtan/studio/sim
-DVT_DEFAULT_BUILD_PATH=/proj/enigma/users/kirtan/studio/.dvt/default.build
+CWD=/proj/enigma/users/kirtan/uvm_studio/sim
+DVT_DEFAULT_BUILD_PATH=/proj/enigma/users/kirtan/uvm_studio/.dvt/default.build
 
-mkdir -p /proj/enigma/users/kirtan/studio/.dvt
+mkdir -p /proj/enigma/users/kirtan/uvm_studio/.dvt
 touch $DVT_DEFAULT_BUILD_PATH
 
 echo +dvt_prepend_init +dvt_env+UVM_HOME=/cad/mgc/questa/2023.3_1/questasim/verilog_src/uvm-1.1d > $DVT_DEFAULT_BUILD_PATH
