@@ -1,7 +1,10 @@
-s1(02Mar2025:17:20:14):  xrun -sv -uvm +access+rw -f sim_files.f +UVM_TESTNAME=base_test 
-s2(02Mar2025:17:20:45):  xrun -sv -uvm +access+rw -f sim_files.f +UVM_TESTNAME=base_test 
-s3(02Mar2025:17:29:22):  xrun -sv -uvm +access+rw -f sim_files.f +UVM_TESTNAME=base_test 
-s4(02Mar2025:17:31:37):  xrun -sv -uvm +access+rw -f sim_files.f +UVM_TESTNAME=base_test 
-s5(02Mar2025:17:41:31):  xrun -sv -uvm +access+rw -f sim_files.f +UVM_TESTNAME=base_test 
-s6(02Mar2025:17:42:14):  xrun -sv -uvm +access+rw -f sim_files.f +UVM_TESTNAME=base_test 
-s7(02Mar2025:17:50:50):  xrun -sv -uvm +access+rw -f sim_files.f +UVM_TESTNAME=base_test 
+s1(02Mar2025:20:19:32):  xrun -sv -uvm +access+rw -f sim_files.f +UVM_TESTNAME=base_test 
+s2(02Mar2025:20:45:00):  xrun -sv -uvm +access+rw -f sim_files.f +UVM_TESTNAME=base_test 
+s3(02Mar2025:20:46:30):  xrun -sv -uvm +access+rw -f sim_files.f +UVM_TESTNAME=base_test 
+s4(02Mar2025:20:50:06):  xrun -sv -uvm +access+rw -f sim_files.f +UVM_TESTNAME=base_test 
+s5(02Mar2025:21:00:33):  xrun -sv -uvm +access+rw -f sim_files.f +UVM_TESTNAME=base_test 
+s6(02Mar2025:21:02:13):  xrun -sv -uvm +access+rw -f sim_files.f +UVM_TESTNAME=base_test 
+s7(02Mar2025:21:32:23):  xrun -sv -uvm +access+rw -f sim_files.f +UVM_TESTNAME=base_test 
+s8(02Mar2025:21:36:55):  xrun -sv -uvm +access+rw -f sim_files.f +UVM_TESTNAME=base_test 
+s9(02Mar2025:21:37:34):  xrun -sv -uvm +access+rw -f sim_files.f +UVM_TESTNAME=base_test 
+s10(02Mar2025:21:39:49):  xrun -sv -uvm +access+rw -f sim_files.f +UVM_TESTNAME=base_test 

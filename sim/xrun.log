@@ -1,5 +1,5 @@
 xrun: 23.09-s001: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
-TOOL:	xrun	23.09-s001: Started on Mar 02, 2025 at 17:50:50 PST
+TOOL:	xrun	23.09-s001: Started on Mar 02, 2025 at 21:39:49 PST
 xrun
 	-sv
 	-uvm
@@ -16,12 +16,10 @@ xrun
 		-sv
 		/proj/enigma/users/kirtan/uvm_studio/tb/testbench.sv
 	+UVM_TESTNAME=base_test
-Recompiling... reason: file '../uvm/uvc/mem_driver.sv' is newer than expected.
-	expected: Sun Mar  2 17:17:02 2025
-	actual:   Sun Mar  2 17:50:48 2025
+Recompiling... reason: file '../uvm/sequences/base_sequence.sv' is newer than expected.
+	expected: Sun Mar  2 21:37:27 2025
+	actual:   Sun Mar  2 21:39:47 2025
 Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /cad/cds/xcelium/xcelium23.09.001/tools/methodology/UVM/CDNS-1.1d
-xmvlog: *W,USENDT: Please use the new -enable_no_default_type_param switch or -newsv switch instead of CADENCE_ENABLE_AVSREQ_63188_PHASE_1 environment variable to trigger the same functionality.
-xmvlog: *W,USENDT: Please use the new -enable_no_default_type_param switch or -newsv switch instead of CADENCE_ENABLE_AVSREQ_63188_PHASE_1 environment variable to trigger the same functionality.
 file: /proj/enigma/users/kirtan/uvm_studio/uvm/uvm_package_files.sv
     super.new(name, parent);
             |
@@ -40,7 +38,7 @@ file: /proj/enigma/users/kirtan/uvm_studio/tb/testbench.sv
 		errors: 0, warnings: 0
 xmvlog: *W,SPDUSD: Include directory /proj/enigma/users/kirtan/uvm_studio/tb given but not used.
 	Total errors/warnings found outside modules and primitives:
-		errors: 0, warnings: 2
+		errors: 0, warnings: 1
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
 	Top level design units:
@@ -52,8 +50,8 @@ xmvlog: *W,SPDUSD: Include directory /proj/enigma/users/kirtan/uvm_studio/tb giv
 		testbench
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.testbench:sv <0x5670440a>
-			streams: 519, words: 466694
+		worklib.testbench:sv <0x0c5140e4>
+			streams: 519, words: 467586
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
@@ -61,7 +59,7 @@ xmvlog: *W,SPDUSD: Include directory /proj/enigma/users/kirtan/uvm_studio/tb giv
 		Modules:                       2       2
 		Interfaces:                    1       1
 		Verilog packages:              5       5
-		Registers:                 13896   10160
+		Registers:                 13896   10161
 		Scalar wires:                  4       -
 		Vectored wires:                4       -
 		Named events:                  4      12
@@ -108,15 +106,15 @@ Name                       Type                    Size  Value
 --------------------------------------------------------------
 uvm_test_top               base_test               -     @2630
   env                      mem_env                 -     @2690
-    mem_agnt               mem_agent               -     @2738
-      driver               mem_driver              -     @2850
-        rsp_port           uvm_analysis_port       -     @2951
-        seq_item_port      uvm_seq_item_pull_port  -     @2900
-      monitor              mem_monitor             -     @2770
-        mon_analysis_port  uvm_analysis_port       -     @2819
-      sequencer            mem_sequencer           -     @2930
-        rsp_export         uvm_analysis_export     -     @3039
-        seq_item_export    uvm_seq_item_pull_imp   -     @3587
+    mem_agnt               mem_agent               -     @2739
+      driver               mem_driver              -     @2851
+        rsp_port           uvm_analysis_port       -     @2952
+        seq_item_port      uvm_seq_item_pull_port  -     @2901
+      monitor              mem_monitor             -     @2771
+        mon_analysis_port  uvm_analysis_port       -     @2820
+      sequencer            mem_sequencer           -     @2931
+        rsp_export         uvm_analysis_export     -     @3040
+        seq_item_export    uvm_seq_item_pull_imp   -     @3588
         arbitration_queue  array                   0     -    
         lock_queue         array                   0     -    
         num_last_reqs      integral                32    'd1  
@@ -126,6 +124,7 @@ UVM_INFO /proj/enigma/users/kirtan/uvm_studio/uvm/./uvc/mem_driver.sv(32) @ 0: u
 UVM_INFO /proj/enigma/users/kirtan/uvm_studio/uvm/./uvc/mem_driver.sv(39) @ 5: uvm_test_top.env.mem_agnt.driver [driver] after waiting for rstn to be deasserted
 UVM_INFO /proj/enigma/users/kirtan/uvm_studio/uvm/./uvc/mem_driver.sv(44) @ 5: uvm_test_top.env.mem_agnt.driver [driver] enter in main_phase
 UVM_WARNING @ 5: uvm_test_top.env.mem_agnt.sequencer@@base_seq [uvm_sequence_base] Body definition undefined
+addr constraint value = '{'hf5, 'hde, 'hdb, 'hcc, 'hb4, 'h99, 'h37, 'h23} 
 --------- [DRIVER-TRANSFER] ---------
 	ADDR = 0 	WDATA = 0
 	ADDR = 0 	WDATA = 0
@@ -195,4 +194,4 @@ UVM_FATAL :    0
 Simulation complete via $finish(1) at time 355 NS + 86
 /cad/cds/xcelium/xcelium23.09.001/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
 xcelium> exit
-TOOL:	xrun	23.09-s001: Exiting on Mar 02, 2025 at 17:50:53 PST  (total: 00:00:03)
+TOOL:	xrun	23.09-s001: Exiting on Mar 02, 2025 at 21:39:53 PST  (total: 00:00:04)
